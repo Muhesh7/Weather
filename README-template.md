@@ -1,6 +1,6 @@
-# Put title of your app here
+# Weather-App
 
-https://github.com/Muhesh7/Weather/workflows/Check/badge.svg
+![Workflow result](https://github.com/Muhesh7/Weather/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
