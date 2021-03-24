@@ -15,45 +15,49 @@
  */
 package com.example.androiddevchallenge.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import com.example.androiddevchallenge.util.Constants.ic
+import com.example.androiddevchallenge.util.Constants.lc
 
-private val DarkColorPalette = darkColors(
+val DarkColorPalette = darkColors(
     primary = purple200,
     primaryVariant = purple700,
-    secondary = teal200
+    secondary = teal200,
+    onSecondary = ntext,
+    surface = nsurf,
+    onSurface = nBar,
+    onPrimary = nDiv,
+    onBackground = nBut
 )
 
-private val LightColorPalette = lightColors(
+val LightColorPalette = lightColors(
     primary = purple500,
     primaryVariant = purple700,
-    secondary = teal200
-
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    secondary = teal200,
+    onSecondary = dtext,
+    surface = dsurf,
+    onSurface = dBar,
+    onPrimary = dDiv,
+    onBackground = dBut
 )
 
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
+fun AppTheme(darkTheme: Boolean, content: @Composable() () -> Unit) {
+    if (darkTheme) {
+        ic = "d"
+        lc = listOf(ntone1, ntone2, ntone3)
     } else {
-        LightColorPalette
+        ic = "n"
+        lc = listOf(dtone1, dtone2, dtone3)
     }
-
     MaterialTheme(
-        colors = colors,
+        colors = if (darkTheme) DarkColorPalette else LightColorPalette,
         typography = typography,
         shapes = shapes,
-        content = content
-    )
+    ) {
+        content()
+    }
 }
