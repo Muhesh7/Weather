@@ -94,7 +94,6 @@ class WeatherViewModel @Inject constructor(
 
     @SuppressLint("MissingPermission")
     fun getLocation(activity: Activity) {
-        tTS(activity)
         LocationServices.getSettingsClient(activity)
             .checkLocationSettings(
                 LocationSettingsRequest.Builder().build()
@@ -121,7 +120,7 @@ class WeatherViewModel @Inject constructor(
             }
     }
 
-    private fun tTS(activity: Activity) {
+      fun tTS(activity: Activity) {
         mTS = TextToSpeech(activity) {
             if (it == TextToSpeech.SUCCESS) {
                 val res = mTS.setLanguage(Locale.ENGLISH)

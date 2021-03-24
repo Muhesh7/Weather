@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         checkPermission()
+        viewModel.tTS(this)
         mapView.onCreate(savedInstanceState)
         mapView.onResume()
         setContent {
