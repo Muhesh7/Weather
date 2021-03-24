@@ -1,17 +1,17 @@
 # Put title of your app here
 
-<!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
-<!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+https://github.com/Muhesh7/Weather/workflows/Check/badge.svg
 
 
 ## :scroll: Description
-<!--- Describe your app in one or two sentences -->
+Get the weather forecast report of any part of the world just by drag and dropping the marker in google maps and also voice assisted weather report of current location can also be gathered with just a click of a button
 
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
+* MapView is made using androidView and googleMaps API in jetpack compose (interoperability)
+* MVVM Architecture is used with Hilt Dependency Injection (architecture)
+* DataStore Preferences is used for DarkMode preferences storage
+* FusedLocationProvider is used for getting users currentLocation
 
 
 ## :camera_flash: Screenshots
