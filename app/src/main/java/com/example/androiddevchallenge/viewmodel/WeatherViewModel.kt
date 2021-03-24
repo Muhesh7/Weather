@@ -120,7 +120,7 @@ class WeatherViewModel @Inject constructor(
             }
     }
 
-      fun tTS(activity: Activity) {
+    fun tTS(activity: Activity) {
         mTS = TextToSpeech(activity) {
             if (it == TextToSpeech.SUCCESS) {
                 val res = mTS.setLanguage(Locale.ENGLISH)
